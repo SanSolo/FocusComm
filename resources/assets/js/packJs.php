@@ -14,6 +14,7 @@ header("Content-type: application/javascript");
         'lib/backbone.pclia.js',
         'lib/handlebars.js',
         'lib/handlebars.pclia.js',
+        'lib/modernizr.js',
         // MODELS
         'models/categorie.js',
         'models/categories.js',
