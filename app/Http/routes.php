@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('actualites', 'ActualiteController');
+
+Route::get('/auth/login', 'AuthController@login'); 
+
+Route::group(['middleware' => ['auth']], function () {    
+        Route::get('/auth/logout', 'AuthController@logout');
+});
