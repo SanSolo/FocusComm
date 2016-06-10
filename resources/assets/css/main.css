@@ -160,6 +160,9 @@ body{
   background-size: cover;
 }
 
+
+}
+
 .block  h1{
   text-align: center;
   color:white;
@@ -219,6 +222,7 @@ footer{
 #intro{
 
   color:black;
+  font-weight: bold;
 }
 
 #intro h3 {
@@ -226,6 +230,11 @@ footer{
   color:#1F397B;
   font-weight: bold;
   font-size: 25px;
+}
+
+#intro p{
+
+width:50%;
 }
 
 .logo{
@@ -544,6 +553,66 @@ footer{
 .s4.c{
 
   margin-left:-10%!important;
+}
+
+
+.Burger{
+
+  position: absolute;
+  top:0;
+  left: 0;
+  margin-top: 5%;
+  margin-left: 5%;
+  cursor: pointer;
+
+}
+
+.Burger:before{
+  content: '\f109';
+  font-family: "Flaticon";
+  color:white;
+  font-size: 0.7em;
+}
+
+.Loupe{
+
+  position: absolute;
+  top:0;
+  right: 0;
+  margin-top: 5%;
+  margin-right: 5%;
+  cursor: pointer;
+
+}
+
+.Loupe:before{
+
+  content: '\f10b';
+  font-family: "Flaticon";
+  color:white;
+  font-size: 0.7em;
+}
+
+/*partie responsive */
+@media screen and (max-width: 640px) {
+   body{
+    background-color: white;
+    background-image: url("");
+  }
+
+  #intro p{
+
+width:80%;
+display: inline;
+text-align: justify;
+}
+
+.menuLateral{
+
+  height:100%;
+  width:85%;
+  background-color: #586366;
+  z-index:2;
 }
 
 
