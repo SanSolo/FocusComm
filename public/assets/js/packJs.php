@@ -40,8 +40,8 @@ header("Content-type: application/javascript");
         'views/actualitesAdm.js',
 
         // TP
-        //'tp/main.js',
-        'tp/mainAdm.js',
+        'tp/main.js',
+        //'tp/mainAdm.js',
 
         // AUTRES
         'contents/categories.js',

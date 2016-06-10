@@ -16,19 +16,4 @@
                     <nav id ="CategorieListe">
                     </nav>
                 </section>
-
-
-
-
-                <article id="quiz">
-
-                    <h2>Choisir Catégorie</h2>
-
-                        <section id="categoriesQuiz" class="row catQuiz">
-                        </section>
-
-                        <section id="contenu_quizz" class="contentQuiz">
-                        </section>
-
-                </article>
 @endsection
