@@ -74,8 +74,8 @@ $(function (){
         collection: actualites
     });
     var domNews = v_actualites.render();
-    $("#news").append(domNews);
-
+    $("#columns").append(domNews);
+    
 
 
 
