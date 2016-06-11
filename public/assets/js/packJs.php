@@ -25,6 +25,8 @@ header("Content-type: application/javascript");
         'models/categoriesAdm.js',
         'models/actualiteAdm.js',
         'models/actualitesAdm.js',
+        'models/quizPart.js',
+        'models/quizsPart.js',
 
 
         // VIEWS
@@ -38,10 +40,13 @@ header("Content-type: application/javascript");
         'views/categoriesAdm.js',
         'views/actualiteAdm.js',
         'views/actualitesAdm.js',
+        'views/quizPart.js',
+        'views/quizsPart.js',
 
         // TP
-        'tp/main.js',
+        //'tp/main.js',
         'tp/mainAdm.js',
+        'tp/mainPart.js',
 
         // AUTRES
         'contents/categories.js',
@@ -49,6 +54,7 @@ header("Content-type: application/javascript");
         'contents/actualites.js',
         'contents/categoriesAdm.js',
         'contents/actualitesAdm.js',
+        'contents/quizsPart.js',
     ];
 
     $js = '';

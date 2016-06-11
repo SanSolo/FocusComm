@@ -20,6 +20,11 @@ Route::get('/admin', function () {
     return view('admin/index');
 });
 
+// Partner
+Route::get('/partner', function () {
+    return view('partner/index');
+});
+
 // User
 Route::get('/user/', 'UserController@index');
 Route::get('/user/{id}', 'UserController@show');
