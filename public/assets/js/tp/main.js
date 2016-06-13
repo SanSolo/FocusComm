@@ -53,7 +53,7 @@ $(function (){
         $(window).on("popstate", function(e) {
                 $("#categories").hide();
                 $(".content").hide();
-                
+
                 var section = location.hash;
                 if ($(section).length == 0) {
                     section = "#categories";
@@ -68,7 +68,7 @@ $(function (){
 
 //------affichage news---------
 
-    var actualites = new ModelActualites(NEWS);
+    var actualites = new ModelActualites(news);
 
     var v_actualites = new ViewActualites({
         collection: actualites

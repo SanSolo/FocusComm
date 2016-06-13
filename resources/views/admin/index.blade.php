@@ -13,7 +13,7 @@
                 <label class="labelLoginAdm col s12 m6" name="motDePasse">Mot de passe</label>
                 <input class ="inputLoginAdm col s12 m6" name="motDePasse" type="password" placeholder="mot de passe"> <br>
             </div>
-             <button class="btn waves-effect waves-light" type="submit" name="action">Connexion
+             <button id="connexionLogin" class="btn waves-effect waves-light" type="submit" name="action">Connexion
                 <i class="material-icons right">send</i>
             </button>
         </form>

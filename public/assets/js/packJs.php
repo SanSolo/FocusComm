@@ -21,8 +21,6 @@ header("Content-type: application/javascript");
         'models/contenus.js',
         'models/actualite.js',
         'models/actualites.js',
-        'models/categorieAdm.js',
-        'models/categoriesAdm.js',
         'models/actualiteAdm.js',
         'models/actualitesAdm.js',
 
@@ -34,21 +32,18 @@ header("Content-type: application/javascript");
         'views/contenus.js',
         'views/actualite.js',
         'views/actualites.js',
-        'views/categorieAdm.js',
-        'views/categoriesAdm.js',
         'views/actualiteAdm.js',
         'views/actualitesAdm.js',
 
         // TP
         'tp/main.js',
         'tp/mainAdm.js',
-        'tp/actionActu.js',
+        'tp/mainActu.js',
 
         // AUTRES
         'contents/categories.js',
         'contents/contenus.js',
         'contents/actualites.js',
-        'contents/categoriesAdm.js',
         'contents/actualitesAdm.js',
     ];
 
