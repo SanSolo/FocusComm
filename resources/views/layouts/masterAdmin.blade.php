@@ -12,6 +12,10 @@
             <a href="#" class="brand-logo"><img class="logo"src="../assets/img/logo_ciao_rvb.png">
             <h5 class="loginAdmTitre">Plateforme administrateur</h5>
             </a>
+            <div id="boutonDeconnexion">
+                <button class="btn waves-effect waves-light" type="text" name="action">Déconnexion
+                </button>
+            </div>
     </header>
         <main class="main">
         @yield('content')

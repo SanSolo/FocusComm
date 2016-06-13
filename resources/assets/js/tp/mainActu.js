@@ -1,8 +1,5 @@
 $(function (){
-
-
 //------affichage news---------
-
     var actualites = new ModelActualites(ACTUALITES);
 
     var v_actualites = new ViewActualites({
@@ -10,7 +7,6 @@ $(function (){
     });
     var domNews = v_actualites.render();
     $("#news").append(domNews);
-
 });
 
 

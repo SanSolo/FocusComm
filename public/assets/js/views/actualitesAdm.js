@@ -1,6 +1,6 @@
 var ViewActualitesAdm = Pclia.ViewCollection.extend({
     events: {
-
+        "click #boutonAjouter": "add",
     },
     initialize: function () {
         this.listenTo(this.collection, "add remove", this.render);
@@ -14,5 +14,13 @@ var ViewActualitesAdm = Pclia.ViewCollection.extend({
             $("#actualiteAdm", container).append(dom);
         });
         return container;
+    },
+    add: function () {
+        var title = $("#titreInput", this.$el).val();
+        var date = $("#dateArticleAAjouter", this.$el).val();
+        this.collection.create({
+            title: title,
+            date: date,
+        });
     },
 });
