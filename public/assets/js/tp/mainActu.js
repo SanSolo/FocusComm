@@ -13,8 +13,8 @@ $(function (){
     var domNews = v_actualites.render();
     $("#rowactu").append(domNews);
     
-    $(".fondnoir").hide();
-    $(".actualite").hide();
+        $(".fondnoir").hide();
+        $(".actualite").hide();
 });
 
 
