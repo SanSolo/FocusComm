@@ -30,10 +30,94 @@
 line-height: 3.85em;
 }
 
+table{
+
+	width:auto !important;
+}
+
+th{
+
+	text-align: center!important;
+}
+.browser-default{
+	display: inline!important;
+}
+
+.categorieLegende{
+	display: inline!important;
+}
+
+.quizCategorie{
+
+	width:300px;
+}
+
+.BoutonAjtRNone{
+
+	display: none;
+}
+
+#boutonAjouterQuiz{
+
+	z-index: 1;
+}
+
+.popUp{
+    background: rgba(0,0,0, .8);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 0;
+
+/*display: none;
+*/}
+
+
+.waves-effect{
+
+z-index: -2;}
+
+
+.lePop {
+
+
+	text-align: center;
+	margin-left: 35%;
+	width: 40%;
+	height:40%;
+	color:red;
+	background-color: black;
+	margin-top: 10%;
+}
+
+.lePop{
+
+	padding-top: 3%;
+}
+
+
+.RepFNone{
+	display: none;
+}
+
+
+.titreQuiz{
+	width:200px;
+}
+
+.BoutonSaveQuiz{
+	margin-top: 0%;
+}
+
 .boitePartner h1:hover{
 line-height: 3.85em;
 
 }
+
+.BtnBackQuiz{
+margin-right: -600px;}
 
 #accueilEspacePartner{
 

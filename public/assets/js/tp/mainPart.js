@@ -1,29 +1,37 @@
+var tmplQuestion;
+var tmplRep;
+
 $(function (){
 
-	//-----------section et autre cachée de base ------
+var cmptTitre =1;
+var cmptQuestion = 0;
+var cmptRep =2;
+
+var tmplQuestion = $(".question").clone();
+var tmplRep = $(".RepFNone").clone();
 
 
-$("#listQuiz").hide();
-$("#accueilEspacePartner").hide();
-
- $("#bouton_connection").on("click",function(){
-
- $("#loginPlateForme").hide();
- $("#introPartner").hide();
- $("#accueilEspacePartner").show("slow");
-});
-
- $(".pourleQuiz").on("click",function(){
-
-  $("#accueilEspacePartner").hide();
- $("#listQuiz").show("slow");
-
+$("#boutonAjouterQuestion").on("click",function(){
+ cmptTitre++;
+ $(".qList").append(tmplQuestion);
+ $(".question").attr("id","Q"+cmptTitre);
+ $(".BoutonAjtR").attr("id","boutonAjouterReponse"+cmptTitre);
+ $(".BoutonAjtR").attr("class","btn-floating btn-large waves-effect waves-light green");
+ $("#espace").attr("class","EspaceDispo"+cmptTitre);
+ $("#espace").attr("id","");
+ $(".titleQuestion").attr("id","tq"+cmptTitre);
+ $(".titleQuestion").append(" " + cmptTitre);
+ $("#Q"+cmptTitre).attr("class","");
+ $("#tq"+cmptTitre).attr("class","");
+ cmptRep =0;
+ cmptQuestion++ ;
  });
 
-$(".BtnBackHome").on("click",function(){
 
- $("section").hide();
- $("#accueilEspacePartner").show("slow");
+$("#boutonAjouterReponse1").on("click",function(){
+	$(".EspaceDispo"+cmptTitre).append(tmplRep);
+	$(".RepFNone").attr("class","RepF");
+ 	cmptRep ++;
  });
 
 
@@ -36,6 +44,8 @@ $(".BtnBackHome").on("click",function(){
     var dom = v_quizsPart.render();
     $("#quizList").append(dom);
 });
+
+
 
 
 
