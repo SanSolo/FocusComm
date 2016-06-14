@@ -9,6 +9,20 @@
 </section>
 
 <section id ="loginPlateForme" class="row">
+
+<div id="MessageErr">
+    <h5 class="IconFail"></h5>
+    <h6 id="MessErr">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </h6>
+</div>
+
+</br>
+
     <form>
         <div id="nomUtilisateur" class="loginPlateForm row">
             <label class="labelLoginAdm col s12 m6" name="nomUtilisateurLabel" >Nom d'utilisateur ou e-mail</label>
@@ -18,19 +32,13 @@
             <label class="labelLoginAdm col s12 m6" name="mdtLabel">Mot de passe</label>
             <input class ="inputLoginAdm col s12 m6" name="mdtInput" type="password" placeholder="mot de passe"> <br>
         </div>
-        <a class="waves-effect waves-light btn" type="submit" id="bouton_connection">Connexion</a>
+        <a class="waves-effect waves-light btn boutonConnexion" type="submit" id="bouton_connection">Connexion</a>
     </form>
     <a href="#" id ="mdtOublie">Mot de passe oublié ?</a>
 </section>
 
-<section class="popUp">
-
-    <div class="lePop">
-        <h4>Mots de passe ou Nom d'utilisateur éroné</h4>
-        <a class="waves-light btn" type="submit" id="bouton_connection">ok</a>
-    </div>
 
 
-</section>
+
 </main>
 @endsection

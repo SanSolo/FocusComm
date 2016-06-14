@@ -12,7 +12,7 @@ var ViewQuizsPart = Pclia.ViewCollection.extend({
 
                 var view = new ViewQuizPart({model: model});
                 var dom = view.render();
-                $("#quizPart", container).append(dom);
+                $("#quizPart", container).append(dom.html());
 
         });
         return container;
