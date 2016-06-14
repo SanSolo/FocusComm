@@ -80,6 +80,13 @@ class RegionPaysSeeder extends Seeder
         $actualite = ServiceApplicatif::create([
         	'nom' => 'actualites',
         ]);
+        $appQuizz = ServiceApplicatif::create([
+            'nom' => 'quizz',
+        ]);
+        $appContenu = ServiceApplicatif::create([
+            'nom' => 'contenu',
+        ]);
+
          /**
 		 * Seeding Roles
          */
@@ -96,8 +103,21 @@ class RegionPaysSeeder extends Seeder
 
         // Define Role of a Group for a ServiceApplicatif
         $groupeAdmin->servicesapplicatifs()->save($actualite, ['nom' => Role::CREATE]);
+        $groupeAdmin->servicesapplicatifs()->save($actualite, ['nom' => Role::UPDATE]);
+        $groupeAdmin->servicesapplicatifs()->save($actualite, ['nom' => Role::READ]);
+        $groupeAdmin->servicesapplicatifs()->save($actualite, ['nom' => Role::DELETE]);
+        $groupeAdmin->servicesapplicatifs()->save($appQuizz, ['nom' => Role::CREATE]);
+        $groupeAdmin->servicesapplicatifs()->save($appQuizz, ['nom' => Role::UPDATE]);
+        $groupeAdmin->servicesapplicatifs()->save($appQuizz, ['nom' => Role::READ]);
+        $groupeAdmin->servicesapplicatifs()->save($appQuizz, ['nom' => Role::DELETE]);
+        $groupeAdmin->servicesapplicatifs()->save($appContenu, ['nom' => Role::CREATE]);
+        $groupeAdmin->servicesapplicatifs()->save($appContenu, ['nom' => Role::UPDATE]);
+        $groupeAdmin->servicesapplicatifs()->save($appContenu, ['nom' => Role::READ]);
+        $groupeAdmin->servicesapplicatifs()->save($appContenu, ['nom' => Role::DELETE]);
 
-
+        $groupeUser->servicesapplicatifs()->save($actualite, ['nom' => Role::READ]);
+        $groupeUser->servicesapplicatifs()->save($appQuizz, ['nom' => Role::READ]);
+        $groupeUser->servicesapplicatifs()->save($appContenu, ['nom' => Role::READ]);
         /**
         *	Seeding Categories
         */
