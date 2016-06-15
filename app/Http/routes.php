@@ -21,6 +21,10 @@
     	return view('home/index');
 	});
 
+	Route::get('/register', function () {
+    	return view('register');
+	});
+
 	Route::post('/', 'AuthController@login');
 
 	Route::get('/stress', function () {
