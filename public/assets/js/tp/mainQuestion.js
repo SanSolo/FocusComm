@@ -2,7 +2,7 @@ $(function (){
 
 
 
-    var questionsQ = new ModelQuestions(QUESTIONS); //questions
+    var questionsQ = new ModelQuestions(questions); //questions
 
     var v_questions = new ViewQuestions({
         collection: questionsQ
@@ -17,10 +17,11 @@ $(function (){
 
 var score = 0;
 
-var total = questions.length;
+var total = questionsQ.length;
 
 $(".messageJuste").hide();
 $(".messageFaux").hide();
+
 
 
 
@@ -47,24 +48,23 @@ $(window).on('end', function() {
     $("#total").append(total);
     $("#affichageScore").show();
 
-    if (score == total) {
-        alert("Bravo tu as obtenu un badge !")
-    };
+    // if (score == total) {
+    //     alert("Bravo tu as obtenu un badge !")
+    // };
 });
 
 
-//  var storage_score = new JsonStorage("score");
+$(window).on("getAnswer", function(e) {
+    console.log("tareponse");
+});
 
 
-// storage_score = 0;
-
-// console.log(storage_score);
 
 
-//---------------------------------------------
+//---------------Badges--------------------------
 
-// $('.buttonQ').on('click', function() {
-// //------affichage questions---------
+
+
 
 
 

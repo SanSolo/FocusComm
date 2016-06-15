@@ -62,6 +62,9 @@ Use App\Models\User;
 		return view('login');
 	})->name('login');
 
+	Route::get('/register', 'RegisterController@index');
+	Route::post('/register', 'UserController@store');
+
 	// Pas autorisé
 	Route::get('/accesInterdit', function(){
 		return view('nonAutorise');
@@ -78,8 +81,8 @@ Use App\Models\User;
 		Route::get('/logout', 'AuthController@logout');
 
 		// User
-		Route::get('/compte', 'UserController@monCompte');
-		Route::put('/compte', 'UserController@updateMonCompte');
+		Route::get('/admin/compte', 'UserController@monCompte');
+		Route::put('/admin/compte', 'UserController@updateMonCompte');
 	});
 
 	// Administration
