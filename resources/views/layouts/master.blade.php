@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-    <title>@yield('title')</title>
+    <title>Ciao.ch - @yield('title')</title>
     <meta charset="utf-8">
     <script src="{{asset('assets/js/packJs.php')}}"></script>
     <link rel="stylesheet" href="{{asset('assets/css/materialize.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
-    <script src="{{asset('assets/js/tp/mainResponsiv.js')}}"></script>
+    <script src="{{asset('assets/js/tp/main.js')}}"></script>
     <link rel="stylesheet" href="{{asset('assets/css/responsiv.css')}}">
+    <script src="{{asset('assets/js/materialize.js')}}"></script>
+    <script src="{{asset('assets/js/tp/mainResponsiv.js')}}"></script>
 
      <!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -15,7 +17,7 @@
     <body>
         <div class="bigDiv"></div>
             <div class="menuMobile">
-                                    <span class="cross"> Fermer</span>
+                    <span class="cross"> Fermer</span>
                     <ul class="listeMenu">
                         <li class=""><a href="/">Accueil</a></li>
                         <li class=""><a href="actualites">Actualité</a></li>
@@ -32,27 +34,27 @@
         <header class="row">
              <nav class="col m12 s12">
                 <div class="nav-wrapper">
-                    <!--burger croix loupe gérer avec js-->
                     <span class="burger"></span>
                     <span class="loupe"></span>
-                    <a href="/" class="brand-logo"><img class="logo" src="{{asset('assets/img/logo_ciao_rvb.png')}}"> <h5 class="donde">@yield('page')</h5></a>
+                    <a href="/" class="brand-logo"><img class="logo" src="{{asset('assets/img/logo_ciao_rvb.png')}}"> <h5 class="donde">@yield('title')</h5></a>
                     <ul id="nav-mobile" class="hide-on-med-and-down">
-                        <li><a class="ici" href="/">Accueil</a></li>
-                        <li><a class="" href="actualites">Actualité</a></li>
-                        <li><a class="" href="#">Adresse</a></li>
-                        <li><a class="" href="#">Pose ta question</a></li>
-                        <li><a class="" href="#">Forum</a></li>
-                        <li><a class="" href="#">Urgence</a></li>
-                        <li><a class="" href="quizzs">Quizzs</a></li>
+                        <li id="home" class=""><a class="" href="/">Accueil</a></li>
+                        <li id="actualites"><a class="" href="actualites">Actualités</a></li>
+                        <li id="home"><a class="" href="#">Adresse</a></li>
+                        <li id="home"><a class="" href="#">Pose ta question</a></li>
+                        <li id="home"><a class="" href="#">Forum</a></li>
+                        <li id="home"><a class="" href="#">Urgence</a></li>
+                        <li id="quizzs"><a class="" href="quizzs">Quizzs</a></li>
                     </ul>
                 </div>
             </nav>
+
             @if(!Session::has('user_id'))
-                <span class="loggEtAutre"><a class="waves-effect waves-light btn" href="/login"><i class="material-icons left">person</i>Se connecter</a>
-                <a class="waves-effect waves-light btn" href="/register"><i class="material-icons left">person_pin</i>S'enregistrer</a></span>
+                <span class="loggEtAutre"><p><a class="waves-effect waves-light btn he1" id="boutondepart" href="/login"><i class="material-icons left">person</i>Se connecter</a>
+                </p><p><a class="waves-effect waves-light btn he2" id="boutondepart" href="/register"><i class="material-icons left">person_pin</i>S'enregistrer</a></p></span>
             @else
-                <span class="loggEtAutre"><p>Bonjour, {{Session::get('pseudo')}}</p></br>
-                <p><a class="waves-effect waves-light btn" href="/logout"><i class="material-icons left">person</i>Déconnexion</a></p></span>
+                <span class="loggEtAutre"><p>Bonjour,<span id="ev"> {{Session::get('pseudo')}} </span></p><p>
+                <a class="waves-effect waves-light btn deco he3" id="boutondepart2" href="/logout"><i class="material-icons left">person</i>Déconnexion</a></p></span>
             @endif
         </header>
         @yield('sidenav')
@@ -65,7 +67,7 @@
 
 <footer class="page-footer">
           <div class="container">
-            <div class="row">
+            <div class="row rowduFooter">
               <div class="col l3 s12">
                 <h5>Soutenez CIAO</h5>
                 <p class="text-lighten-4">CCP 10-5261-6</p>

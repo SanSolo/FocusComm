@@ -44,7 +44,7 @@
         <div class="row">
           <div class="input-field col s12 m12 l12">
               <button class="btn waves-effect waves-light" type="submit" name="action">Se connecter
-                <i class="material-icons right">send</i>
+                <i class="material-icons right">person</i>
               </button>
           </div>
         </div>

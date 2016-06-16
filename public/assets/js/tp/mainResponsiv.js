@@ -1,20 +1,11 @@
 $(function (){
 
+	console.log("test");
+
 $(".cross").hide("");
 $(".bigDiv").hide("");
 $(".menuMobile").hide("");
 $(".rechercheMobile").hide("");
-
-
-if (window.matchMedia("(min-width: 600px)").matches) {
-  /* La largeur minimum de l'affichage est 600 px inclus */
-} else {
-  /* L'affichage est inférieur à 600px de large */
-  $(".page-footer").hide();
-  $(".loggEtAutre").hide();
-}
-
-
 
 $(".burger").on("click",function(){
 	console.log("j'aime la pizza");
@@ -61,10 +52,26 @@ $(".bigDiv").on("click",function(){
 	$(".burger").fadeIn("slow");
 	$(".loupe").fadeIn("slow");
 
+});
+
+testLargeur();
+
 
 });
 
+function testLargeur (){
+
+if (window.matchMedia("(min-width: 600px)").matches) {
+  /* La largeur minimum de l'affichage est 600 px inclus */
+} else {
+  /* L'affichage est inférieur à 600px de large */
+  $(".page-footer").hide();
+  $(".loggEtAutre").hide();
 
 
+}
 
-});
+
+setTimeout(testLargeur,1000);
+
+};
